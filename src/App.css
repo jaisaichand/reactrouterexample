@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background: #e1e7e9;
+  overflow-x: hidden;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
 }
 
 .App-logo {
@@ -7,10 +16,43 @@
   pointer-events: none;
 }
 
+.backgroundcommonall {
+  background: #e1e7e9;
+}
+
+.logorelative {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.logoabsolute {
+  position: absolute;
+  top: -30px;
+  left: 42%;
+}
+
+.errorText {
+  color: rgb(236, 31, 72);
+}
+
+.displayallcenter {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.mainLoginBrick {
+  min-width: 350px;
+  max-width: 380px;
+  min-height: 325px;
+  background: white;
 }
 
 .App-header {
@@ -28,11 +70,119 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logoImage {
+  width: 58px;
+  height: 58px;
+  border-radius: 49%;
+}
+
+.mainBrick {
+  min-width: 350px;
+  max-width: 380px;
+  min-height: 440px;
+  background: white;
+}
+
+.MuiFormControl-root.MuiTextField-root {
+  width: 83%;
+}
+
+.fullwidthfullheight {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.mainflexnav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainflexnav {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.search {
+  position: relative;
+  border-radius: 8px;
+  margin-left: 0;
+  width: 100%;
+}
+
+.tabsParent {
+  top: -8px;
+  position: relative;
+}
+
+header.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorTransparent.MuiPaper-elevation4 {
+  box-shadow: none !important;
+}
+AppBar {
+  box-shadow: none !important;
+}
+.searchIcon {
+  padding: 5px;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .mainflexnav {
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}
+
+.logoClass {
+  width: 50px;
+  height: 50px;
+  border-radius: 49%;
+}
+
+*:focus{
+  outline: none !important;
+}
+
+.AddIconClass {
+  font-size: 40px !important;
+}
+.marginzeroauto{
+  margin: 0 auto;
+}
+.mainlogo {
+  width: 60px !important;
+  height: 60px !important;
+}
+.fulltopbar {
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 1px 24px 35px -29px rgba(128, 128, 128, 0.74);
+  -moz-box-shadow: 1px 24px 35px -29px rgba(128, 128, 128, 0.74);
+  box-shadow: 1px 24px 35px -29px rgba(128, 128, 128, 0.74);
+  height: 70px;
+}
+
+.restrict-width {
+  width: 83%;
+}
+
+.font-super-small {
+  font-size: x-small;
+}
+
+.border-radius-ten {
+  border-radius: 10px;
 }

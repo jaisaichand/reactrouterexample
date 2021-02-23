@@ -1,31 +1,41 @@
-
-import './App.css';
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route, HashRouter
+} from "react-router-dom";
+import { hashHistory } from 'react-router';
+import './App.css';
+import Signup from './Components/Signup';
 
-import Nav from './Nav';
+import Home from './Components/Home';
+import Login from './Components/Login';
+import ForgotPassword from './Components/ForgotPassword';
+import PostItem from './Components/PostItem';
+// import 'bootstrap/dist/css/bootstrap.css'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import About from './About';
-import Shop from './Shop';
-import Home from './Home';
-import ShopItem from './Shopitem';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App bg-black">
 
-      <Router>
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/shop" component={Shop} exact />
-          <Route path="/shop/:id" component={ShopItem} />
-          <Route path="*" exact component={About} />
-        </Switch>
-      </Router>
-    </div>
-  );
+
+        <HashRouter>
+          <Switch>
+            <Route path="/" exact component={Home} ></Route>
+
+            <Route path="/signup" component={Signup} ></Route>
+            <Route path="/login" component={Login} ></Route>
+            <Route path="/post/:id" component={PostItem} ></Route>
+            <Route path="/forgotpassword" component={ForgotPassword} ></Route>
+
+          </Switch>
+
+        </HashRouter>
+      </div>
+    );
+  }
 }
 
 export default App;
